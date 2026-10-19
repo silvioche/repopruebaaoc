@@ -6,9 +6,12 @@ El planteamiento completo (arquitectura, ciclo del agente, costos, regla de gobi
 
 ## Link de prueba
 
-**URL pública:** https://pacific-faster-por-coding.trycloudflare.com
+**URL pública:** https://registro-contratos-atbp.onrender.com
 
-Es un túnel de Cloudflare hacia el servidor local: está activo mientras el equipo anfitrión y el proceso estén encendidos, y la URL cambia si el túnel se reinicia. Ahora mismo corre en **modo simulado** (sin clave de modelo). Para tener un link estable 24/7, ver «Despliegue» (Render).
+Desplegado en Render (plan gratuito) desde `render.yaml`. Notas:
+- Si el servicio estuvo inactivo unos 15 minutos, la primera visita tarda de 30 a 60 segundos en despertarlo.
+- Corre en **modo simulado** mientras no se configure `ANTHROPIC_API_KEY` en el panel de Render; `GET /api/health` indica el proveedor activo.
+- El disco es efímero: `out/` vuelve al estado inicial en cada reinicio o redespliegue. El botón «Reiniciar datos» hace lo mismo a demanda.
 
 Si el despliegue define `ACCESS_KEY`, el front pide la clave al abrirlo (se entrega por separado, nunca en el repositorio).
 
