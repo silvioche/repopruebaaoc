@@ -6,7 +6,9 @@ El planteamiento completo (arquitectura, ciclo del agente, costos, regla de gobi
 
 ## Link de prueba
 
-**URL pública:** _pendiente de despliegue — ver «Despliegue» más abajo._
+**URL pública:** https://wires-match-little-practitioner.trycloudflare.com
+
+Es un túnel de Cloudflare hacia el servidor local: está activo mientras el equipo anfitrión y el proceso estén encendidos, y la URL cambia si el túnel se reinicia. Ahora mismo corre en **modo simulado** (sin clave de modelo). Para tener un link estable 24/7, ver «Despliegue» (Render).
 
 Si el despliegue define `ACCESS_KEY`, el front pide la clave al abrirlo (se entrega por separado, nunca en el repositorio).
 
