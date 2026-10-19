@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro de Contratos</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="marca">
+      <span class="logo" aria-hidden="true">▤</span>
+      <div>
+        <h1>Registro de Contratos Vigentes</h1>
+        <p class="sub">Punto único de recepción · buzón <code>contratos@</code></p>
+      </div>
+    </div>
+    <div class="acciones">
+      <span id="proveedor" class="insignia">conectando…</span>
+      <button id="nueva" class="btn sec" type="button" title="Empieza una conversación nueva">Nueva sesión</button>
+      <button id="reiniciar" class="btn sec" type="button" title="Borra out/ (maestro de trabajo, historial, procesados) y vuelve al estado inicial">Reiniciar datos</button>
+    </div>
+  </header>
+
+  <div id="aviso-simulado" class="aviso" hidden>
+    <strong>Modo simulado:</strong> el backend no tiene clave de un modelo de lenguaje configurada; responde un planificador determinista que usa las mismas herramientas y el mismo ciclo del agente. Entiende instrucciones básicas.
+  </div>
+
+  <div id="panel-clave" class="aviso" hidden>
+    <label for="clave">Este despliegue está protegido. Clave de acceso:</label>
+    <input id="clave" type="password" autocomplete="off">
+    <button id="guardar-clave" class="btn" type="button">Guardar</button>
+  </div>
+
+  <main class="disposicion">
+    <section class="chat" aria-label="Conversación">
+      <div id="mensajes" class="mensajes" aria-live="polite"></div>
+      <div id="sugerencias" class="sugerencias"></div>
+      <form id="formulario" class="entrada">
+        <textarea id="texto" rows="2" placeholder="Escribe una instrucción… (Enter para enviar, Shift+Enter salto de línea)" maxlength="4000"></textarea>
+        <button id="enviar" class="btn" type="submit">Enviar</button>
+      </form>
+      <p class="pie">Sesión <code id="sesion"></code> · <span id="uso">0 tokens</span></p>
+    </section>
+
+    <aside class="lateral" aria-label="Maestro y alertas">
+      <div class="pestanas" role="tablist">
+        <button class="pestana activa" data-vista="maestro" role="tab" type="button">Maestro</button>
+        <button class="pestana" data-vista="alertas" role="tab" type="button">Alertas</button>
+      </div>
+      <div id="vista-maestro" class="vista"></div>
+      <div id="vista-alertas" class="vista md" hidden></div>
+    </aside>
+  </main>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

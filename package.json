@@ -1,0 +1,27 @@
+{
+  "name": "reto-02-registro-contratos",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Agente conversacional de registro de contratos vigentes (punto único de recepción).",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.ts",
+    "start": "node src/server.ts",
+    "demo": "node demo.ts",
+    "typecheck": "tsc --noEmit",
+    "sync-modulo": "node scripts/sync-modulo.ts",
+    "check-modulo": "node scripts/sync-modulo.ts --check",
+    "test": "node scripts/prueba-ciclo.ts && node demo.ts && node scripts/sync-modulo.ts --check"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
+}

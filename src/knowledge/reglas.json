@@ -1,0 +1,34 @@
+{
+  "umbral_confianza": 0.8,
+  "dias_alerta_vencimiento": 60,
+  "fecha_corte_maestro": "2026-05-30",
+  "similitud_objeto_actualizacion": 0.9,
+  "nit_propio": "900123456",
+  "tipos_poliza": {
+    "cumplimiento": "cumplimiento",
+    "calidad": "calidad",
+    "salarios y prestaciones": "salarios_prestaciones",
+    "salarios_prestaciones": "salarios_prestaciones",
+    "pago de salarios": "salarios_prestaciones",
+    "responsabilidad civil": "responsabilidad_civil",
+    "estabilidad": "estabilidad",
+    "buen manejo del anticipo": "anticipo",
+    "anticipo": "anticipo",
+    "seriedad": "seriedad_oferta"
+  },
+  "moneda_por_palabra": {
+    "pesos": "COP",
+    "dolares": "USD",
+    "soles": "PEN",
+    "balboas": "PAB",
+    "lempiras": "HNL"
+  },
+  "moneda_por_pais": { "CO": "COP", "EC": "USD", "PE": "PEN", "PA": "USD", "HN": "HNL" },
+  "pais_por_texto": {
+    "colombia": "CO", "bogota": "CO", "medellin": "CO", "barranquilla": "CO", "cali": "CO",
+    "ecuador": "EC", "quito": "EC", "guayaquil": "EC",
+    "peru": "PE", "lima": "PE",
+    "panama": "PA",
+    "honduras": "HN", "tegucigalpa": "HN", "san pedro sula": "HN"
+  }
+}
